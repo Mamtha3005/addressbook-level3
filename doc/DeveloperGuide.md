@@ -46,6 +46,8 @@ Priority | As a ... | I want to ... | So that I can...
 `* * *` | user | delete a person | remove entries that I no longer need
 `* * *` | user | find a person by name | locate details of persons without having to go through the entire list
 `* *` | user | hide [private contact details](#private-contact-detail) by default | minimize chance of someone else seeing them by accident
+`* *` | user | give special tags to contacts | categorise people
+`* *` | user | edit contacts | contacts are updated
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
 
 
@@ -57,19 +59,20 @@ Priority | As a ... | I want to ... | So that I can...
 
 **MSS**
 
-1. User requests to list persons
-2. AddressBook shows a list of persons
-3. User requests to delete a specific person in the list
-4. AddressBook deletes the person <br>
+1. User requests to edit a person tag
+2. AddressBook display the current person tag
+3. User enters the new person tag
+4. AddressBook asks if change is confirmed.
+5. Addressbook change the tag and store in database.
 Use case ends.
 
 **Extensions**
 
-2a. The list is empty
+2a. The person is not valid/does not exist.
 
 > Use case ends
 
-3a. The given index is invalid
+3a. The given tag is invalid
 
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
@@ -80,7 +83,9 @@ Use case ends.
 2. Should be able to hold up to 1000 persons.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
-
+5. Should have a nice GUI.
+6. Should be able to share address book.
+ 
 ## Appendix D : Glossary
 
 ##### Mainstream OS
